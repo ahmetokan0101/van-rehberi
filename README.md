@@ -20,6 +20,18 @@
 
 ---
 
+## 📸 Ekran Görüntüleri
+
+| Sayfa | Görünüm |
+|-------|---------|
+| **Ana Sayfa** | ![Ana Sayfa](screenshots/ana-sayfa.png) |
+| **Galeri** | ![Galeri](screenshots/galeri.png) |
+| **Gezilecek Yerler** | ![Gezilecek Yerler](screenshots/gezilecek-yerler.png) |
+| **Yemekler** | ![Yemekler](screenshots/yemekler.png) |
+| **Müzeler** | ![Müzeler](screenshots/muzeler.png) |
+| **Tarihçe** | ![Tarihçe](screenshots/tarihce.png) |
+| **İletişim** | ![İletişim](screenshots/iletisim.png) |
+
 ## ✨ Özellikler
 
 | # | Özellik | Açıklama |
