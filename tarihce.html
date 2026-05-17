@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Van Tarihi | Van Rehberi</title>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="assets/leanding-kedi.png">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .tarihce-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    section {
+      border-bottom: 1px solid #eee;
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    section:last-child {
+      border-bottom: none;
+    }
+  </style>
+</head>
+
+<body class="bg-light">
+  <!-- Preloader (Eski Mavi Tasarım) -->
+  <div id="preloader"
+    style="position:fixed; top:0; left:0; width:100%; height:100%; background:#0d6efd; z-index:10000; display:flex; justify-content:center; align-items:center; flex-direction:column; color:white;">
+    <h1
+      style="font-weight:bold; font-size:60px; letter-spacing:10px; margin-bottom:10px; border:5px solid white; padding:10px 30px;">
+      VAN</h1>
+    <p style="color:rgba(255,255,255,0.7); font-size:18px; letter-spacing:2px;">REHBERİ YÜKLENİYOR...</p>
+  </div>
+
+  <!--nav bar burasi -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary" id="ustMenu">
+    <div class="container" id="menuTasiyici">
+      <a class="navbar-brand fw-bold" href="index.html">VAN GÖLÜ REHBERİ</a>
+      <div id="anaMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+          <li class="nav-item"><a class="nav-link active fw-bold" href="tarihce.html">Tarihçe</a></li>
+          <li class="nav-item"><a class="nav-link" href="gezilecek-yerler.html">Gezilecek Yerler</a></li>
+          <li class="nav-item"><a class="nav-link" href="yemekler.html">Yemekler</a></li>
+          <li class="nav-item"><a class="nav-link" href="muzeler.html">Müzeler</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Header -->
+  <header class="bg-white py-5 mb-5">
+    <div class="container text-center">
+      <h1 class="fw-bold text-primary mb-2">Şehrin Zaman Tüneli</h1>
+      <p class="text-secondary">Urartulardan Bugüne Van'ın Gizemli Geçmişi</p>
+    </div>
+  </header>
+
+  <!-- Ana İçerik -->
+  <div class="container py-2">
+    <div class="row">
+      <div class="col-lg-10">
+        <div class="bg-white p-4 rounded-4 shadow-sm border">
+
+          <!-- Yazı Büyütme -->
+          <div class="text-end mb-4">
+            <button id="yaziKucult" class="btn btn-sm btn-outline-secondary">A-</button>
+            <button id="yaziBuyut" class="btn btn-sm btn-outline-secondary ms-1">A+</button>
+          </div>
+
+          <!-- Bölüm 1: Urartular -->
+          <section class="row mb-5 pb-5">
+            <div class="col-md-7 mb-4">
+              <h4 class="fw-bold text-primary mb-3">Tuşba ve Urartu Dönemi</h4>
+              <p class="text-secondary">
+                Van'ın kalbi m.ö. 9. yüzyılda Urartu Kralı I. Sardur ile atmaya basladı. Krallığın başkenti Tuşba (Van
+                Kalesi), mühendislik harikası Şamran kanalı ve paha biçilmez altın işçiliği ile o dönem dünyanın en
+                ileri medeniyetlerinden biriydi. Kral Menua ve Argishti'nin mirası bugün hala kale duvarlarında çivi
+                yazılarıyla yaşıyor.
+              </p>
+            </div>
+            <div class="col-md-5">
+              <img src="assets/van-kalesi.jpg" class="tarihce-img" alt="Urartu Tanrıları Van Kalesi">
+            </div>
+          </section>
+
+          <!-- Bölüm 2: Türk-İslam Dönemi -->
+          <section class="row mb-5 pb-5">
+            <div class="col-md-7 mb-4">
+              <h4 class="fw-bold text-primary mb-3">Selçuklu ve Osmanlı Şehri</h4>
+              <p class="text-secondary">
+                Malazgirt Zaferi'nin (1071) ardından Van, tamamen Türklerin hakimiyetine girdi. Ahlatşahlar ve Selçuklu
+                mirasıyla donatılan şehir, 1548 yılında Kanuni Sultan Süleyman tarafından Osmanlı'ya katıldı. Eski Van
+                Kalesi eteğindeki şehir, camileri, yedi kapılı surları ve hanlarıyla tam bir ticaret merkezi halini
+                aldı.
+              </p>
+            </div>
+            <div class="col-md-5">
+              <img src="assets/van-cami.jpg" class="tarihce-img" alt="Osmanlı Dönemi Van">
+            </div>
+          </section>
+
+          <!-- Bölüm 3: Yakın Tarih -->
+          <section class="row mb-4">
+            <div class="col-md-7 mb-4">
+              <h4 class="fw-bold text-primary mb-3">Milli Mücadele ve 2 Nisan</h4>
+              <p class="text-secondary">
+                Birinci Dünya Savaşı'nda "Eski Van Şehri" tamamen yakılıp yıkılarak harabeye döndü. 2 Nisan 1918'de
+                düşman işgalinden kurtulan halk, kalenin dibindeki o harabe şehri bırakıp, bugünkü modern Van'ın olduğu
+                bölgeye tasındı. Van, küllerinden yeniden doğan bir kahramanlık sembolü oldu.
+              </p>
+            </div>
+            <div class="col-md-5">
+              <div class="p-4 bg-primary text-white rounded-4 d-flex flex-column justify-content-center" style="height: 220px;">
+                <h5 class="fw-bold text-center">2 NİSAN 1918</h5>
+                <p class="small text-center mb-0">Van'ın Kurtuluşu</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Geri Dönüş -->
+          <div class="text-center pt-4 mt-5">
+            <a href="index.html" class="btn btn-outline-primary btn-lg">Ana Sayfa'ya Dön</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div id="emojiAlani" class="container text-center my-5">
+    <div
+      class="p-4 bg-white text-dark rounded-4 shadow border border-primary border-opacity-25 overflow-hidden position-relative"
+      style="border-width: 3px !important;">
+      <h5 class="fw-bold text-primary mb-3">Sitemizi Beğendiniz mi?</h5>
+      <div class="d-flex justify-content-center gap-4" style="font-size: 40px; cursor: pointer;">
+        <span class="emoji-oy" data-mesaj="Harika! Van'ı sevmenize çok sevindik! 😍">😍</span>
+        <span class="emoji-oy" data-mesaj="Teşekkürler! Kendimizi geliştirmeye devam edeceğiz. 😊">😊</span>
+        <span class="emoji-oy" data-mesaj="Üzüldük... Eksiklerimizi iletişim formundan yazabilirsiniz. 😔">😔</span>
+      </div>
+      <p id="oyMesaji" class="mt-3 fw-bold text-success d-none"></p>
+    </div>
+  </div>
+
+  <!-- Ziyaretçi Sayacı -->
+  <div class="container text-center my-4">
+    <div class="p-4 bg-white text-dark rounded-4 shadow border border-primary border-opacity-25"
+      style="border-width: 3px !important;">
+      <p class="mb-1 small text-secondary"> Toplam Ziyaretçi</p>
+      <h2 class="fw-bold display-5 mb-1 text-primary" id="ziyaretciSayi">...</h2>
+      <p class="mb-0 small text-secondary">kişi bu siteyi ziyaret etti</p>
+    </div>
+  </div>
+
+  <footer class="bg-primary text-white py-5 mt-5" id="altBilgi">
+    <div class="container text-center" id="altBilgiTasiyici">
+      <h5 class="fw-bold mb-3">Van Şehir Rehberi</h5>
+      <ul class="list-inline mb-4">
+        <li class="list-inline-item"><a href="index.html" class="text-white text-decoration-none">Ana Sayfa</a></li>
+        <li class="list-inline-item mx-2 text-white opacity-50">|</li>
+        <li class="list-inline-item"><a href="tarihce.html" class="text-white text-decoration-none">Tarihçe</a></li>
+        <li class="list-inline-item mx-2 text-white opacity-50">|</li>
+        <li class="list-inline-item"><a href="gezilecek-yerler.html" class="text-white text-decoration-none">Gezilecek
+            Yerler</a></li>
+        <li class="list-inline-item mx-2 text-white opacity-50">|</li>
+        <li class="list-inline-item"><a href="iletisim.html" class="text-white text-decoration-none">İletişim</a></li>
+      </ul>
+      <p class="mb-0 small opacity-75 text-white text-center">© 2026 Van Şehir Rehberi | 11. Sınıf Proje Ödevi</p>
+    </div>
+  </footer>
+
+  <button id="yukariCik" class="btn btn-primary"
+    style="display:none; position:fixed; bottom:20px; right:20px; z-index:99; border-radius:50px; width:50px; height:50px; font-size:20px; font-weight:bold;">↑</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>

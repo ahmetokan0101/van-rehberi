@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Müzeler | Van Rehberi</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="assets/leanding-kedi.png">
+  <!-- Resim Büyütme Modalı (Lightbox) -->
+  <div id="resimModal"
+    style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:9999; justify-content:center; align-items:center; cursor:pointer;">
+    <img id="modalResim" src="" style="max-width:90%; max-height:90%; border:5px solid white; border-radius:10px;">
+    <span style="position:absolute; top:20px; right:30px; color:white; font-size:40px; font-weight:bold;">&times;</span>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body class="bg-light">
+  <!-- Preloader (Eski Mavi Tasarım) -->
+  <div id="preloader"
+    style="position:fixed; top:0; left:0; width:100%; height:100%; background:#0d6efd; z-index:10000; display:flex; justify-content:center; align-items:center; flex-direction:column; color:white;">
+    <h1
+      style="font-weight:bold; font-size:60px; letter-spacing:10px; margin-bottom:10px; border:5px solid white; padding:10px 30px;">
+      VAN</h1>
+    <p style="color:rgba(255,255,255,0.7); font-size:18px; letter-spacing:2px;">REHBERİ YÜKLENİYOR...</p>
+  </div>
+
+  <!--nav bar burasi -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary" id="ustMenu">
+    <div class="container" id="menuTasiyici">
+      <a class="navbar-brand fw-bold" href="index.html">VAN GÖLÜ REHBERİ</a>
+      <div id="anaMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+          <li class="nav-item"><a class="nav-link" href="tarihce.html">Tarihçe</a></li>
+          <li class="nav-item"><a class="nav-link" href="gezilecek-yerler.html">Gezilecek Yerler</a></li>
+          <li class="nav-item"><a class="nav-link" href="yemekler.html">Yemekler</a></li>
+          <li class="nav-item"><a class="nav-link active fw-bold" href="muzeler.html">Müzeler</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sayfa Başlığı -->
+  <header class="bg-white py-5 mb-5">
+    <div class="container text-center">
+      <h1 class="fw-bold text-primary">Van'ın Tarih Hazinesi</h1>
+      <p class="text-secondary">Tarihe Işık Tutan Değerler ve Müzeler</p>
+    </div>
+  </header>
+
+  <!-- Ana İçerik -->
+  <div class="container py-4">
+
+    <!-- Müzeler -->
+    <div class="row g-4 mb-5">
+
+      <!-- 1. Van Müzesi -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden text-center">
+          <img src="assets/van-muzesi.jpg" class="card-img-top" alt="Van Müzesi" style="height: 200px; object-fit: cover;">
+          <div class="card-body p-4">
+            <span class="badge bg-primary mb-2">MODERN ARKEOLOJİ</span>
+            <h5 class="fw-bold text-primary mb-3">Van Müzesi</h5>
+            <p class="text-secondary mb-4">2019 yılında halka açılan yeni modern binasıyla Van Müzesi, Urartu medeniyetine dair dünyadaki en geniş ve en prestijli koleksiyona sahiptir.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Urartu Altınları -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden text-center">
+          <img src="assets/van-urartu-eserleri.jpg" class="card-img-top" alt="Urartu Eserleri" style="height: 200px; object-fit: cover;">
+          <div class="card-body p-4">
+            <span class="badge bg-warning text-dark mb-2">PAHA BİÇİLEMEZ</span>
+            <h5 class="fw-bold text-primary mb-3">Urartu Altın Koleksiyonu</h5>
+            <p class="text-secondary mb-4">Müzenin en özel seksiyonu olan Urartu Altınları, o dönemin metal işleme sanatındaki inanılmaz dehasını kanıtlar. 3000 yıl öncesine ait takılar.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Akdamar Kilisesi Müzesi -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden text-center">
+          <img src="assets/akdamar.jpg" class="card-img-top" alt="Akdamar Kilisesi" style="height: 200px; object-fit: cover;">
+          <div class="card-body p-4">
+            <span class="badge bg-info text-dark mb-2">UNESCO MİRASI</span>
+            <h5 class="fw-bold text-primary mb-3">Akdamar Kilisesi Müzesi</h5>
+            <p class="text-secondary mb-4">Gevaş ilçesindeki adada bulunan bu anıtsal kilise, bir müze-yapı olarak her yıl yüz binlerce ziyaretçiyi ağırlar. Ortaçağ Ermeni sanatının dünyadaki en meşhur örneğidir.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Van Kalesi -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden text-center">
+          <img src="assets/van-kalesi.jpg" class="card-img-top" alt="Van Kalesi" style="height: 200px; object-fit: cover;">
+          <div class="card-body p-4">
+            <span class="badge bg-danger mb-2">AÇIK HAVA MÜZESİ</span>
+            <h5 class="fw-bold text-primary mb-3">Van Kalesi</h5>
+            <p class="text-secondary mb-4">Urartu Krallığı'nın başkenti Tuşba'nın kalbi. Kral mezarları, çivi yazılı kitabeler ve 2800 yıllık surlarıyla devasa bir açık hava müzesidir.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Çavuştepe Kalesi -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden text-center">
+          <img src="assets/van-cavustepe.jpg" class="card-img-top" alt="Çavuştepe Kalesi" style="height: 200px; object-fit: cover;">
+          <div class="card-body p-4">
+            <span class="badge bg-success mb-2">URARTU SARAYI</span>
+            <h5 class="fw-bold text-primary mb-3">Çavuştepe Kalesi</h5>
+            <p class="text-secondary mb-4">Kral II. Sarduri'nin sarayı. Sarnıçları, tapınakları ve dünyaca ünlü çivi yazılı kitabeleriyle Urartu ihtişamını gözler önüne serer.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Hoşap Kalesi -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden text-center">
+          <img src="assets/van-hosap-kalesi.jpg" class="card-img-top" alt="Hoşap Kalesi" style="height: 200px; object-fit: cover;">
+          <div class="card-body p-4">
+            <span class="badge bg-secondary mb-2">ORTAÇAĞ ŞATOSİ</span>
+            <h5 class="fw-bold text-primary mb-3">Hoşap Kalesi</h5>
+            <p class="text-secondary mb-4">1643 yılında Süleyman Bey tarafından inşa edilen şato. Demir kapısı, aslan kabartmaları ve mimari yapısıyla tarihi bir müze niteliğindedir.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. Eski Van Şehri -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden text-center">
+          <img src="assets/van-eski-sehir.jpg" class="card-img-top" alt="Eski Van Şehri" style="height: 200px; object-fit: cover;">
+          <div class="card-body p-4">
+            <span class="badge bg-warning text-dark mb-2">TARİHİ ALAN</span>
+            <h5 class="fw-bold text-primary mb-3">Eski Van Şehri</h5>
+            <p class="text-secondary mb-4">Van Kalesi eteklerinde, Birinci Dünya Savaşı'na kadar yaşamın sürdüğü tarihi şehir. Hüsrev Paşa Camii ve Kaya Çelebi Camii gibi Osmanlı eserleri.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. Van Camileri -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden text-center">
+          <img src="assets/van-cami.jpg" class="card-img-top" alt="Van Camileri" style="height: 200px; object-fit: cover;">
+          <div class="card-body p-4">
+            <span class="badge bg-info text-dark mb-2">OSMANLI MİRASI</span>
+            <h5 class="fw-bold text-primary mb-3">Tarihi Camiler</h5>
+            <p class="text-secondary mb-4">Ulu Cami, Kaya Çelebi Camii ve Hüsrev Paşa Camii gibi Osmanlı dönemi eserleri. Her biri mimari ve tarihi değer taşıyan yapılardır.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9. Şeytan Köprüsü -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden text-center">
+          <img src="assets/van-seytan-koprusu.jpg" class="card-img-top" alt="Şeytan Köprüsü" style="height: 200px; object-fit: cover;">
+          <div class="card-body p-4">
+            <span class="badge bg-primary mb-2">TARİHİ KÖPRÜ</span>
+            <h5 class="fw-bold text-primary mb-3">Şeytan Köprüsü</h5>
+            <p class="text-secondary mb-4">Bendimahi Çayı üzerinde 19. yüzyıldan kalma tarihi köprü. Mimari yapısı ve konumuyla tarihi bir eser niteliğindedir.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-5">
+      <a href="index.html" class="btn btn-outline-primary btn-lg px-5">Ana Sayfa'ya Dön</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <!-- Geri Bildirim Sistemi -->
+  <div id="emojiAlani" class="container text-center my-5">
+    <div
+      class="p-4 bg-white text-dark rounded-4 shadow border border-primary border-opacity-25 overflow-hidden position-relative"
+      style="border-width: 3px !important;">
+      <h5 class="fw-bold text-primary mb-3">Sitemizi Beğendiniz mi?</h5>
+      <div class="d-flex justify-content-center gap-4" style="font-size: 40px; cursor: pointer;">
+        <span class="emoji-oy" data-mesaj="Harika! Van'ı sevmenize çok sevindik! 😍">😍</span>
+        <span class="emoji-oy" data-mesaj="Teşekkürler! Kendimizi geliştirmeye devam edeceğiz. 😊">😊</span>
+        <span class="emoji-oy" data-mesaj="Üzüldük... Eksiklerimizi iletişim formundan yazabilirsiniz. 😔">😔</span>
+      </div>
+      <p id="oyMesaji" class="mt-3 fw-bold text-success d-none"></p>
+    </div>
+  </div>
+
+  <!-- Ziyaretçi Sayacı -->
+  <div class="container text-center my-4">
+    <div class="p-4 bg-white text-dark rounded-4 shadow border border-primary border-opacity-25"
+      style="border-width: 3px !important;">
+      <p class="mb-1 small text-secondary"> Toplam Ziyaretçi</p>
+      <h2 class="fw-bold display-5 mb-1 text-primary" id="ziyaretciSayi">...</h2>
+      <p class="mb-0 small text-secondary">kişi bu siteyi ziyaret etti</p>
+    </div>
+  </div>
+
+  <footer class="bg-primary text-white py-5 mt-5" id="altBilgi">
+    <div class="container text-center" id="altBilgiTasiyici">
+      <h5 class="fw-bold mb-3">Van Şehir Rehberi</h5>
+      <ul class="list-inline mb-4">
+        <li class="list-inline-item"><a href="index.html" class="text-white text-decoration-none">Ana Sayfa</a></li>
+        <li class="list-inline-item mx-2 text-white opacity-50">|</li>
+        <li class="list-inline-item"><a href="tarihce.html" class="text-white text-decoration-none">Tarihçe</a></li>
+        <li class="list-inline-item mx-2 text-white opacity-50">|</li>
+        <li class="list-inline-item"><a href="gezilecek-yerler.html" class="text-white text-decoration-none">Gezilecek
+            Yerler</a></li>
+        <li class="list-inline-item mx-2 text-white opacity-50">|</li>
+        <li class="list-inline-item"><a href="iletisim.html" class="text-white text-decoration-none">İletişim</a></li>
+      </ul>
+      <p class="mb-0 small opacity-75 text-white text-center">© 2026 Van Şehir Rehberi | 11. Sınıf Proje Ödevi</p>
+    </div>
+  </footer>
+  <button id="yukariCik" class="btn btn-primary"
+    style="display:none; position:fixed; bottom:20px; right:20px; z-index:99; border-radius:50px; width:50px; height:50px; font-size:20px; font-weight:bold;">↑</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>

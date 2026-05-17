@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Van Şehir Rehberi</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="assets/leanding-kedi.png">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script defer src="index.js"></script>
+  <script defer src="anaSayfa.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body class="bg-light">
+  <div id="preloader"
+    style="position:fixed; top:0; left:0; width:100%; height:100%; background:#0d6efd; z-index:10000; display:flex; justify-content:center; align-items:center; flex-direction:column; color:white;">
+    <h1
+      style="font-weight:bold; font-size:60px; letter-spacing:10px; margin-bottom:10px; border:5px solid white; padding:10px 30px;">
+      VAN</h1>
+    <p style="color:rgba(255,255,255,0.7); font-size:18px; letter-spacing:2px;">REHBERİ YÜKLENİYOR...</p>
+  </div>
+
+
+  <!--nav bar burasi -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary" id="ustMenu">
+    <div class="container" id="menuTasiyici">
+      <a class="navbar-brand fw-bold" href="index.html">VAN GÖLÜ REHBERİ</a>
+      <div id="anaMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Ana Sayfa</a></li>
+          <li class="nav-item"><a class="nav-link" href="tarihce.html">Tarihçe</a></li>
+          <li class="nav-item"><a class="nav-link" href="gezilecek-yerler.html">Gezilecek Yerler</a></li>
+          <li class="nav-item"><a class="nav-link" href="yemekler.html">Yemekler</a></li>
+          <li class="nav-item"><a class="nav-link" href="muzeler.html">Müzeler</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- KARŞILAMA ALANI -->
+  <header class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+
+        <!-- SOL -->
+        <div class="col-lg-6 text-center text-lg-start">
+
+          <!-- SELAMLAMA -->
+          <div class="mb-3 fw-bold text-secondary" style="font-size: 1.1rem;">
+            <div id="selamlamaMesaji"></div>
+            <div id="selamlamaTarihSaat" style="font-size: 1rem;"></div>
+          </div>
+
+          <h1 class="fw-bold text-primary mb-4" style="font-size: 3.5rem; line-height: 1.2;">
+            Doğu'nun İncisi Van
+          </h1>
+
+          <p class="text-secondary mb-5" style="font-size: 1.25rem; line-height: 1.6;">
+            Dünyanın en eski şehirlerinden biri olan, tarihi ve doğasıyla büyüleyen Van kentine hoş geldiniz.
+          </p>
+
+          <a href="tarihce.html" class="btn btn-primary btn-lg me-3 px-4 py-3 rounded-pill shadow">
+            Tarihçeyi Oku
+          </a>
+
+          <a href="gezilecek-yerler.html" class="btn btn-outline-primary btn-lg px-4 py-3 rounded-pill">
+            Hemen Keşfet
+          </a>
+
+        </div>
+
+        <!-- SAĞ -->
+        <div class="col-lg-6 text-center mt-4 mt-lg-0">
+          <img src="assets/van-manzarasi-kis.jpg" alt="Van Kış Manzarası" class=" rounded-4 shadow-lg"
+            style="max-width: 450px;">
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Günün Bilgisi Kismimiz -->
+  <div class="container mb-5">
+    <div class="p-4  rounded-4 shadow-sm border text-center" id="bilgiKutusuKapsayici">
+      <h5 class="fw-bold text-primary mb-3">🎲 Günün Van Bilgisi</h5>
+      <p id="gununBilgisiYazisi" class="fw-bold text-secondary mb-4 p-3  rounded-3">Bilgi yükleniyor...</p>
+      <button id="yeniBilgiButonu" class="btn btn-outline-primary px-4">Farklı Bilgi Getir</button>
+    </div>
+  </div>
+
+  <!-- Cardlarimizin kismi burasi -->
+  <div class="container" id="anaTopluIcerik">
+    <div class="text-center mb-5" id="oneCikanlarBaslik">
+      <h2 class="fw-bold text-primary">Öne Çıkan Güzellikler</h2>
+      <p class="text-secondary">Şehrin en popüler ve turistik noktalarına hızlı bir bakış</p>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Van Kalesi -->
+      <div class="col-md-4" id="kutuVanKalesi">
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden text-center card-hover"> <img
+            src="assets/van-kalesi.jpg" class="card-img-top" alt="Van Kalesi" style="height: 200px; object-fit: cover;">
+          <div class="card-body p-4" id="icerikVanKalesi">
+            <h5 class="fw-bold text-primary mb-3">Van Kalesi</h5>
+            <p class="text-secondary  mb-4">Urartu Krallığı başkenti olan bu muazzam kale, tarihin en eski ve
+              ayakta duran yapılarından biridir.</p>
+            <a href="van-kalesi.html" class="btn btn-outline-primary rounded-pill px-4">Detaylı İncele</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kart 2: Akdamar Adası -->
+      <div class="col-md-4" id="kutuAkdamarAdasi">
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden text-center card-hover" id="kartAkdamarAdasi">
+          <img src="assets/van-akdamar-adasi.jpg" class="card-img-top" alt="Akdamar"
+            style="height: 200px; object-fit: cover;">
+          <div class="card-body p-4" id="icerikAkdamarAdasi">
+            <h5 class="fw-bold text-primary mb-3">Akdamar Adası</h5>
+            <p class="text-secondary mb-4">Vangölü ortasında eşsiz kilisesiyle bilinen bu ada, Van'ın en ikonik
+              turistik noktalarından biridir.</p>
+            <a href="akdamar-adasi.html" class="btn btn-outline-primary rounded-pill px-4">Detaylı İncele</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kart 3: Van Kedisi -->
+      <div class="col-md-4" id="kutuVanKedisi">
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden text-center card-hover" id="kartVanKedisi">
+          <img src="assets/van-kedisi.jpg" class="card-img-top" alt="Van Kedisi"
+            style="height: 200px; object-fit: cover;">
+          <div class="card-body p-4" id="icerikVanKedisi">
+            <h5 class="fw-bold text-primary mb-3">Van Kedisi</h5>
+            <p class="text-secondary mb-4">Nesli koruma altında olan, biri mavi biri kehribar gözlü bu kediler
+              kentin adeta yaşayan sembolüdür.</p>
+            <a href="van-kedisi.html" class="btn btn-outline-primary rounded-pill px-4">Detaylı İncele</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kart 4: Van Kahvaltısı -->
+      <div class="col-md-4" id="kutuVanKahvaltisi">
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden text-center card-hover" id="kartVanKahvaltisi">
+          <img src="assets/van-kahvaltisi.jpg" class="card-img-top" alt="Van Kahvaltısı"
+            style="height: 200px; object-fit: cover;">
+          <div class="card-body p-4" id="icerikVanKahvaltisi">
+            <h5 class="fw-bold text-primary mb-3">Van Kahvaltısı</h5>
+            <p class="text-secondary mb-4">Dünyaca ünlü Van kahvaltısı; otlu peyniri, murtuğası ve kavutuyla
+              gerçek bir lezzet şölenidir.</p>
+            <a href="van-kahvaltisi.html" class="btn btn-outline-primary rounded-pill px-4">Detaylı İncele</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kart 5: İnci Kefali -->
+      <div class="col-md-4" id="kutuInciKefali">
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden text-center card-hover" id="kartInciKefali">
+          <img src="assets/van-inci-kefali.jpg" class="card-img-top" alt="İnci Kefali"
+            style="height: 200px; object-fit: cover;">
+          <div class="card-body p-4" id="icerikInciKefali">
+            <h5 class="fw-bold text-primary mb-3">İnci Kefali</h5>
+            <p class="text-secondary mb-4">Sadece Vangölü'nde yaşayan ve suyun akışının tersine yüzen bu balık,
+              görülmeye değer bir göç sunar.</p>
+            <a href="van-baligi.html" class="btn btn-outline-primary rounded-pill px-4">Detaylı İncele</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kart 6: Hoşap Kalesi -->
+      <div class="col-md-4" id="kutuHosapKalesi">
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden text-center card-hover" id="kartHosapKalesi">
+          <img src="assets/van-hosap-kalesi.jpg" class="card-img-top" alt="Hoşap Kalesi"
+            style="height: 200px; object-fit: cover;">
+          <div class="card-body p-4" id="icerikHosapKalesi">
+            <h5 class="fw-bold text-primary mb-3">Hoşap Kalesi</h5>
+            <p class="text-secondary mb-4">Güzelsu'da sarp bir kayalık üzerine kurulu olan bu kale, kartal
+              yuvasını andıran bir görünüme sahiptir.</p>
+            <a href="hosap-kalesi.html" class="btn btn-outline-primary rounded-pill px-4">Detaylı İncele</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Emoji Kısmi -->
+  <div id="emojiAlani" class="container text-center my-5">
+    <div class="p-4 bg-white text-dark rounded-4 shadow border border-primary border-opacity-25"
+      style="border-width: 3px">
+      <h5 class="fw-bold text-primary mb-3">Sitemizi Beğendiniz mi?</h5>
+      <div class="d-flex justify-content-center" style="font-size: 40px;">
+        <span class="emoji-oy" data-mesaj="Harika! Van'ı sevmenize çok sevindik! 😍">😍</span>
+        <span class="emoji-oy" data-mesaj="Teşekkürler! Kendimizi geliştirmeye devam edeceğiz. 😊">😊</span>
+        <span class="emoji-oy" data-mesaj="Üzüldük... Eksiklerimizi iletişim formundan yazabilirsiniz. 😔">😔</span>
+      </div>
+      <p id="oyMesaji" class="mt-3 fw-bold text-success d-none"></p>
+    </div>
+  </div>
+
+  <!-- Ziyaretçi Sayacı -->
+  <div class="container text-center my-4">
+    <div class="p-4 bg-white text-dark rounded-4 shadow border border-primary border-opacity-25"
+      style="border-width: 3px">
+      <p class="mb-1  text-secondary"> Toplam Ziyaretçi</p>
+      <h2 class="fw-bold  mb-1 text-primary" id="ziyaretciSayi">...</h2>
+      <p class="mb-0  text-secondary">kişi bu siteyi ziyaret etti</p>
+    </div>
+  </div>
+
+  <footer class="bg-primary text-white py-5 mt-5" id="altBilgi">
+    <div class=" text-center" id="altBilgiTasiyici">
+      <h5 class="fw-bold mb-3">Van Şehir Rehberi</h5>
+      <ul class="list-inline mb-4">
+        <li class="list-inline-item"><a href="index.html" class="text-white text-decoration-none">Ana Sayfa</a></li>
+        <li class="list-inline-item mx-2 text-white opacity-50">|</li>
+        <li class="list-inline-item"><a href="tarihce.html" class="text-white text-decoration-none">Tarihçe</a></li>
+        <li class="list-inline-item mx-2 text-white opacity-50">|</li>
+        <li class="list-inline-item"><a href="gezilecek-yerler.html" class="text-white text-decoration-none">Gezilecek
+            Yerler</a></li>
+        <li class="list-inline-item mx-2 text-white opacity-50">|</li>
+        <li class="list-inline-item"><a href="iletisim.html" class="text-white text-decoration-none">İletişim</a></li>
+      </ul>
+      <p class="mb-0 small opacity-75 text-white text-center">© 2026 Van Şehir Rehberi | 11. Sınıf Proje Ödevi</p>
+    </div>
+  </footer>
+
+  <button id="yukariCik" class="btn btn-primary"
+    style=" position:fixed; bottom:20px; right:20px;  border-radius:50px; width:50px; height:50px; font-size:20px; font-weight:bold;">↑</button>
+
+
+</body>
+
+</html>
