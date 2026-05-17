@@ -95,12 +95,6 @@ cd van-rehberi
 
 > Herhangi bir sunucu veya derleme aracı gerektirmez. Doğrudan çalışır.
 
-## 📝 Yapılacaklar
-
-- [ ] Mobil menü iyileştirmeleri
-- [ ] Daha fazla Van bilgisi içeriği
-- [ ] Karanlık mod
-
 ## 🧑‍💻 Geliştirici
 
 **Ahmet Okan Kara** - 11. sınıf öğrenci projesi
