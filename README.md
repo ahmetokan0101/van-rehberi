@@ -85,7 +85,6 @@ cd van-rehberi
 
 ## 📝 Yapılacaklar
 
-- [ ] Ekran görüntüleri ekleme
 - [ ] Mobil menü iyileştirmeleri
 - [ ] Daha fazla Van bilgisi içeriği
 - [ ] Karanlık mod
