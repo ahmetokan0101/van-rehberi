@@ -20,17 +20,6 @@
 
 ---
 
-## 📸 Ekran Görüntüleri
-
-> Projeye ait ekran görüntülerini eklemek için `screenshots/` klasörü oluşturup görselleri buraya koyabilirsiniz.
-
-```
-screenshots/
-├── ana-sayfa.png
-├── galeri.png
-└── ...
-```
-
 ## ✨ Özellikler
 
 | # | Özellik | Açıklama |
@@ -94,14 +83,6 @@ cd van-rehberi
 
 > Herhangi bir sunucu veya derleme aracı gerektirmez. Doğrudan çalışır.
 
-## 🌐 Canlı Demo
-
-Projeyi GitHub Pages ile yayınlamak için:
-
-1. Repo ayarlarından **Pages** bölümüne gidin
-2. `main` branch'ini seçin
-3. Birkaç dakika içinde `https://ahmetokan0101.github.io/van-rehberi/` adresinde yayına girer
-
 ## 📝 Yapılacaklar
 
 - [ ] Ekran görüntüleri ekleme
@@ -111,7 +92,7 @@ Projeyi GitHub Pages ile yayınlamak için:
 
 ## 🧑‍💻 Geliştirici
 
-**Ahmet Okandan** - 11. sınıf öğrenci projesi
+**Ahmet Okan Kara** - 11. sınıf öğrenci projesi
 
 ---
 
